@@ -1,7 +1,7 @@
 package ru.yandex.practicum;
-import Wordleexception.GameAlreadyFinishedException;
-import Wordleexception.InvalidWordLengthException;
-import Wordleexception.WordNotFoundInDictionaryException;
+import wordleexception.GameAlreadyFinishedException;
+import wordleexception.InvalidWordLengthException;
+import wordleexception.WordNotFoundInDictionaryException;
 
 import java.io.PrintWriter;
 import java.util.List;

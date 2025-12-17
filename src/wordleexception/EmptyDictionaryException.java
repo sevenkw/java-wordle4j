@@ -1,4 +1,4 @@
-package Wordleexception;
+package wordleexception;
 
 public class EmptyDictionaryException extends Exception {
     public EmptyDictionaryException(String message) {

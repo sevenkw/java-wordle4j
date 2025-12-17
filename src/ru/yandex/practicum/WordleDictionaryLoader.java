@@ -1,6 +1,6 @@
 package ru.yandex.practicum;
 
-import Wordleexception.*;
+import wordleexception.*;
 
 import java.io.*;
 import java.util.ArrayList;
