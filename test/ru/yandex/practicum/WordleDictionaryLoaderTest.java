@@ -1,7 +1,6 @@
 package ru.yandex.practicum;
 
-import WordleException.DictionaryFileNotFoundException;
-import WordleException.EmptyDictionaryException;
+import Wordleexception.DictionaryFileNotFoundException;
 import org.junit.jupiter.api.Test;
 
 import java.io.PrintWriter;

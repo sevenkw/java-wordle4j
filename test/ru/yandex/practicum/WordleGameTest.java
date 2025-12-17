@@ -1,6 +1,6 @@
 package ru.yandex.practicum;
 
-import WordleException.*;
+import Wordleexception.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

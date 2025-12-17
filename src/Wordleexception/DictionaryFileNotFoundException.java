@@ -1,4 +1,4 @@
-package WordleException;
+package Wordleexception;
 
 public class DictionaryFileNotFoundException extends Exception {
     public DictionaryFileNotFoundException(String message) {
