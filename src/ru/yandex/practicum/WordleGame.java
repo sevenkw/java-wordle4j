@@ -21,7 +21,7 @@ import java.util.*;
  */
 public class WordleGame {
 
-    private String answer; // загаданное слово
+    private String answer;
     private int steps; // количество шагов
     private WordleDictionary dictionary;
     private List<String> guessedWords; // список введенных слов пользователя
