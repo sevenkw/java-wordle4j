@@ -1,4 +1,5 @@
 package ru.yandex.practicum;
+
 import wordleexception.GameAlreadyFinishedException;
 import wordleexception.InvalidWordLengthException;
 import wordleexception.WordNotFoundInDictionaryException;

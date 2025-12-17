@@ -13,7 +13,8 @@ import java.util.List;
  */
 public class WordleDictionaryLoader {
     private final PrintWriter log;
-    public WordleDictionaryLoader (PrintWriter log) {
+
+    public WordleDictionaryLoader(PrintWriter log) {
         this.log = log;
     }
 

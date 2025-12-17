@@ -25,11 +25,11 @@ public class WordleDictionary {
         return words.contains(word);
     }
 
-    public static String normalizeWord (String word) {
+    public static String normalizeWord(String word) {
         return word.trim().toLowerCase().replace("ё", "е");
     }
 
-    public boolean isCorrectLength (String word) {
+    public boolean isCorrectLength(String word) {
         word = normalizeWord(word);
         if (word.length() == fixLengthWord) {
             return true;
