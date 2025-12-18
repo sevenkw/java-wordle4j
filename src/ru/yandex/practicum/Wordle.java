@@ -79,7 +79,6 @@ public class Wordle {
                 }
             }
             if (closeGameByStop) {
-
             } else if (game.isWin()) {
                 System.out.println("Поздравляем! Вы отгадали слово!");
                 log.println("Игра завершена победой игрока");
