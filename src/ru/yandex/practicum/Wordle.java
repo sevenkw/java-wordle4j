@@ -37,18 +37,31 @@ public class Wordle {
             log.println("Загадано слово: " + answer);
 
             WordleGame game = new WordleGame(answer, dictionary, log);
+            printRules();
+
+            boolean closeGameByStop = false;
 
             while (!game.isWin() && !game.isLose()) {
 
                 System.out.println("Оставшиеся попытки - " + game.getSteps());
-                System.out.print("Введите слово или (Enter) для подсказки : ");
+                System.out.print("Введите слово или (Enter) для подсказки : " + "\n");
+                System.out.println("Оставшиеся подсказки - " + game.getSteps());
 
-                String input = scanner.nextLine().trim();
+                String input = scanner.nextLine().trim().toLowerCase();
+
+                if (input.equals("стоп")) {
+                    System.out.println("Игра завершена, до скорых встреч!");
+                    closeGameByStop = true;
+                    log.println("Игра завершена по инициативе пользователя.");
+                    break;
+                }
 
                 if (input.isEmpty()) {
                     String suggestion = game.suggestWord();
                     System.out.println("Подсказка: " + suggestion);
+                    game.useAttempt();
                     log.println("Подсказка выдана: " + suggestion);
+                    log.println("Количество ходов уменьшено.");
                     continue;
                 }
 
@@ -65,8 +78,9 @@ public class Wordle {
                     log.println("Игровая ошибка: " + e.getMessage());
                 }
             }
+            if (closeGameByStop) {
 
-            if (game.isWin()) {
+            } else if (game.isWin()) {
                 System.out.println("Поздравляем! Вы отгадали слово!");
                 log.println("Игра завершена победой игрока");
             } else {
@@ -78,6 +92,19 @@ public class Wordle {
             System.out.println("Критическая ошибка в работе программы");
             e.printStackTrace();
         }
+    }
+
+    public static void printRules() {
+        System.out.println("=== Добро пожаловать в игру Wordle ===");
+        System.out.println("- Краткие правила игры:");
+        System.out.println("- Нужно угадать загаданное слово за ограниченное число попыток.");
+        System.out.println("- '+' — буква на правильном месте.");
+        System.out.println("- '^' — буква есть в слове, но стоит в другом месте.");
+        System.out.println("- '-' — такой буквы в слове нет.");
+        System.out.println("- Нажмите Enter на пустой строке, чтобы получить подсказку.");
+        System.out.println("- При выдаче подсказки - уменьшается количество ходов.");
+        System.out.println("- Чтобы выйти из игры, введите в консоль ключевое слово (стоп).");
+        System.out.println();
     }
 
 }

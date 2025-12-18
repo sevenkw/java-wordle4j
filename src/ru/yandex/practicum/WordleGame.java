@@ -200,4 +200,11 @@ public class WordleGame {
         return count == null ? 0 : count;
     }
 
+    public void useAttempt() {
+        if (steps <= 0) {
+            throw new GameAlreadyFinishedException("Попытки закончились");
+        }
+        steps--;
+    }
+
 }
